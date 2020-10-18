@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+</head>
+
+<body>
+
+    <div style="font-weight:700; font-size: 80px">
+    </div>
+    <h1></h1>
+    <script>
+        //传进参数的标准写法
+        //数字型  2019, 10, 01  
+        //字符串型 '2019-10-1 8:8:8'
+        function countDown(time) {
+            var nowTime = +new Date(); // 返回的是当前时间总的毫秒数
+            var inputTime = +new Date(time); // 返回的是用户输入时间总的毫秒数，time需要按照标准格式来写。
+            var times = (inputTime - nowTime) / 1000; //剩余时间总的秒数 
+            var d = parseInt(times / 60 / 60 / 24); // 天   转换成整数
+            d = d < 10 ? '0' + d : d;
+            var h = parseInt(times / 60 / 60 % 24); //时
+            h = h < 10 ? '0' + h : h;
+            var m = parseInt(times / 60 % 60); // 分
+            m = m < 10 ? '0' + m : m;
+            var s = parseInt(times % 60); // 当前的秒
+            s = s < 10 ? '0' + s : s;
+            return d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+        //不能这样写，因为date存储的是那个时刻的时间，无论如何刷新页面都不会有变化
+        // var date = new Date();
+        // div.innerHTML = `tody is ${date.toLocaleString()}`;
+
+        //只有querySelector有innerHTML
+        var div = document.querySelector('div');
+        var h1 = document.querySelector('h1');
+
+        //Window.setInterval
+        setInterval(() => {
+            div.innerHTML = `tody is ${new Date().toLocaleString()}`;
+            h1.innerHTML = `how much time left to 2020-12-24 0:0:0 which is Christmas? <h1>${countDown('2020-12-24 0:0:0')}</h1>`;
+            // countDown('2020-12-24 0:0:0'); //每隔1s刷新html显示的内容，不能用每隔1s刷新countDown再放在html里
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
