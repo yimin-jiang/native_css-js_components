@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: pink;
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            /* margin-top: -100px;
+            margin-left: -100px; */
+            /* 水平垂直方向上再移动自身的一半 */
+            transform: translate(-50%, -50%);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>I am at the centre of the div</p>
+    </div>
+</body>
+
+</html>
