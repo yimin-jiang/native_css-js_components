@@ -18,20 +18,18 @@
             margin: 0 auto;
         }
 
-        .beijing {
+        .city {
             position: absolute;
             top: 227px;
             right: 193px;
         }
 
         .taibei {
-            position: absolute;
             top: 498px;
             right: 78px;
         }
 
         .guangzhou {
-            position: absolute;
             top: 534px;
             right: 182px;
         }
@@ -44,7 +42,7 @@
         }
 
         /* 属性选择器 */
-        div[class^="pulse"] {
+        .city div[class^="pulse"] {
             /* 水平垂直居中 */
             position: absolute;
             top: 50%;
@@ -57,11 +55,11 @@
             animation: pulse 1.2s linear infinite;
         }
 
-        div.pulse2 {
+        .city div.pulse2 {
             animation-delay: 0.4s;
         }
 
-        div.pulse3 {
+        .city div.pulse3 {
             animation-delay: 0.8s;
         }
 
@@ -85,19 +83,19 @@
 
 <body>
     <div class="map">
-        <div class="beijing">
+        <div class="city">
             <div class="dotted"></div>
             <div class="pulse1"></div>
             <div class="pulse2"></div>
             <div class="pulse3"></div>
         </div>
-        <div class="taibei">
+        <div class="city taibei">
             <div class="dotted"></div>
             <div class="pulse1"></div>
             <div class="pulse2"></div>
             <div class="pulse3"></div>
         </div>
-        <div class="guangzhou">
+        <div class="city guangzhou">
             <div class="dotted"></div>
             <div class="pulse1"></div>
             <div class="pulse2"></div>
