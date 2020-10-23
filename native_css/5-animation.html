@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 动画序列：0%  100%。。。。 */
+        @keyframes moveAround {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(600px, 0);
+            }
+
+            50% {
+                transform: translate(600px, 600px);
+            }
+
+            75% {
+                transform: translate(0, 600px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes typeWriter {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 200px;
+
+            }
+        }
+
+        .d1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            /* animation-name: moveAround;
+            animation-duration: 2s; */
+            animation: moveAround 2s ease-in-out backwards;
+        }
+
+        .d2 {
+            font-size: 20px;
+            width: 0;
+            height: 30px;
+            background-color: pink;
+            /* 强制一行显示文字 */
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typeWriter 4s steps(10) forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1"></div>
+    <div class="d2">世纪佳缘我在这里等你</div>
+</body>
+
+</html>

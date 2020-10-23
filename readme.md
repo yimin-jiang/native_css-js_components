@@ -7,6 +7,7 @@
 - section 中要加 transform-style: preserve-3d; 来保证在 3d 运动的时候保留 3d 效果
 
 animation
+transition 过渡
 解构伪类选择器
 
 # **JS**
