@@ -38,7 +38,25 @@
 
         aside:hover {
             transform: translate(500px, -600px) rotate(250deg) scale(3);
+        }
 
+        /* 分页按钮 */
+        li {
+            float: left;
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid pink;
+            border-radius: 50%;
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        li:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -47,6 +65,16 @@
     <section></section>
     <div></div>
     <aside></aside>
+    <!-- 分页按钮 ul>li{$}*7  -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
 </body>
 
 </html>
