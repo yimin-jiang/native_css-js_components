@@ -15,7 +15,7 @@
 - 用阴影来扩张 instead of border
 - 通过多类名来覆盖样式
 
-animation 奔跑的熊
+animation 奔跑的熊 背景位置
 transition 过渡
 解构伪类选择器
 
