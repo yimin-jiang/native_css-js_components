@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 1000px;
+        }
+
+        /* translate */
         section {
             width: 200px;
             height: 200px;
@@ -14,30 +19,33 @@
         }
 
         section:hover {
-            transform: translate(200px, 200px);
+            transform: translate(200px, 0px);
         }
 
+        /* rotate */
         div {
             width: 300px;
             height: 200px;
             background-color: yellowgreen;
-            transition: all 2s ease-in-out;
+            transition: all .8s ease-in-out;
         }
 
         div:hover {
             transform: rotate(360deg);
         }
 
+        /* 综合写法 */
         aside {
+            margin: 0 auto;
             width: 200px;
             height: 200px;
             background-color: pink;
-            border-radius: 50%;
-            transition: all 3s ease-in-out;
+            transition: all .5s;
         }
 
         aside:hover {
-            transform: translate(500px, -600px) rotate(250deg) scale(3);
+            transform: translate(150px, 50px) rotate(360deg) scale(2);
+            /* 顺序很重要。当同时又位移和其他属性的时候，要将位移放到最前面 */
         }
 
         /* 分页按钮 */
@@ -64,7 +72,7 @@
 <body>
     <section></section>
     <div></div>
-    <aside></aside>
+    <aside>Hello World!</aside>
     <!-- 分页按钮 ul>li{$}*7  -->
     <ul>
         <li>1</li>
